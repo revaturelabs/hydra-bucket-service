@@ -1,4 +1,4 @@
-package com.revature.caliber.service;
+package com.revature.hydra.bucket.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
-import com.revature.caliber.model.Bucket;
-import com.revature.caliber.model.SimpleBucket;
+import com.revature.beans.Bucket;
+import com.revature.beans.SimpleBucket;
 
 @Service
 public class BucketService {

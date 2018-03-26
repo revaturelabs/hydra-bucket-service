@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.revature.caliber.model.SimpleBucket;
-import com.revature.caliber.repository.BucketRepository;
+import com.revature.beans.SimpleBucket;
+import com.revature.hydra.bucket.data.BucketRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

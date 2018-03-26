@@ -1,4 +1,4 @@
-package com.revature.caliber;
+package com.revature.hydra.bucket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-//@ComponentScan
-//@EntityScan("com.revature.caliber.model")
+@ComponentScan
+@EntityScan("com.revature.beans")
 public class BucketServiceApplication {
 
 	public static void main(String[] args) {

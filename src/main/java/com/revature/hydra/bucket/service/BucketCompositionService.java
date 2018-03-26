@@ -1,13 +1,13 @@
-package com.revature.caliber.service;
+package com.revature.hydra.bucket.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
-import com.revature.caliber.model.Bucket;
-import com.revature.caliber.model.SimpleBucket;
-import com.revature.caliber.repository.BucketRepository;
+import com.revature.beans.Bucket;
+import com.revature.beans.SimpleBucket;
+import com.revature.hydra.bucket.data.BucketRepository;
 
 @Service
 public class BucketCompositionService {

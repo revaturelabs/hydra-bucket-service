@@ -1,4 +1,4 @@
-package com.revature.caliber.controller;
+package com.revature.hydra.bucket.controller;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import javax.validation.Valid;
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 
-import com.revature.caliber.model.Bucket;
-import com.revature.caliber.model.SimpleBucket;
-import com.revature.caliber.service.BucketService;
+import com.revature.beans.Bucket;
+import com.revature.beans.SimpleBucket;
+import com.revature.hydra.bucket.service.BucketService;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;

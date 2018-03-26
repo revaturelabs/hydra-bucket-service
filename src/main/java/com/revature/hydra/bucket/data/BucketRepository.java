@@ -1,10 +1,10 @@
-package com.revature.caliber.repository;
+package com.revature.hydra.bucket.data;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.revature.caliber.model.SimpleBucket;
+import com.revature.beans.SimpleBucket;
 
 public interface  BucketRepository extends JpaRepository<SimpleBucket, Integer> {
 
