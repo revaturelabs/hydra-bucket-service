@@ -19,8 +19,13 @@ public class BucketReceiverProcessor {
 	@Autowired
 	private BucketRepository bucketRepository;
 
+	/**
+	 * Converts given json object to list of buckets
+	 * 
+	 * @param request json representation of buckets
+	 * @return List of buckets
+	 */
 	public List<SimpleBucket> processSimpleBucketListRequest(JsonObject request) {
-		List<SimpleBucket> bucketList = new ArrayList<>();
 		String methodName = request.get("methodName").getAsString();
 
 		Gson gson = new Gson();

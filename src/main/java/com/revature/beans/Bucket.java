@@ -2,6 +2,9 @@ package com.revature.beans;
 
 import java.io.Serializable;
 
+/**
+ * Bean representing skilltype bucket
+ */
 public class Bucket implements Serializable{
 
 	private static final long serialVersionUID = 1L;

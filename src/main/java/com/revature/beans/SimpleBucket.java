@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * Bucket with JPA annotations
+ */
 @Entity
 @Table(name = "BUCKET")
 public class SimpleBucket implements Serializable {

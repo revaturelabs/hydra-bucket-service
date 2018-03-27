@@ -17,6 +17,12 @@ public class BucketMessageReceiver {
 	@Autowired
 	private BucketReceiverProcessor bucketReceiverProcessor;
 	
+	/**
+	 * Receives messages and returns as processed buckets
+	 * 
+	 * @param message Received message
+	 * @return List of buckets
+	 */
 	@RabbitListener(queues="revature.hydra.repos.bucket")
 	public List<SimpleBucket> receiveBucketListRequest(String message){
 		JsonParser parser = new JsonParser();

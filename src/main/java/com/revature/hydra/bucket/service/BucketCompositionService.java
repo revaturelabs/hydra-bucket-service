@@ -15,18 +15,31 @@ public class BucketCompositionService {
 	@Autowired
 	private BucketRepository bucketRepository;
 	
-	/*
-	 * Saving a simple Bucket bean.
+	/**
+	 * Saves given bucket to database
+	 * 
+	 * @param bucket
 	 */
 	public void save (SimpleBucket bucket) {
 		bucketRepository.save(bucket);
 	}
 	
+	/**
+	 * Returns all buckets
+	 * 
+	 * @return All buckets
+	 */
 	public List<SimpleBucket> findAll (){
 		List<SimpleBucket> buckets = bucketRepository.findAll();
 		return buckets;
 	}
 	
+	/**
+	 * Returns bucket of given id
+	 * 
+	 * @param bucketId Id of bucket 
+	 * @return Bucket of given id
+	 */
 	public SimpleBucket findByBucketId(Integer bucketId) {
 		SimpleBucket bucket = bucketRepository.findOne(bucketId);
 		return bucket;

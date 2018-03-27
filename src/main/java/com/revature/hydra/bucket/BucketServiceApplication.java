@@ -7,6 +7,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 
 
+/**
+ * Bucket service main class
+ */
 @SpringBootApplication
 @ComponentScan
 @EntityScan("com.revature.beans")

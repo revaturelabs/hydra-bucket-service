@@ -48,8 +48,8 @@ public class BucketController {
 	/**
 	 * Create a new SimpleBucket
 	 * 
-	 * @param bucket
-	 * @return
+	 * @param bucket Information to be passed to newly created bucket
+	 * @return The created bucket
 	 */
 	@RequestMapping(value="/bucket/createBucket", method= RequestMethod.POST, consumes= MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<SimpleBucket> createNewBucket(@Valid @RequestBody SimpleBucket bucket){
@@ -63,22 +63,22 @@ public class BucketController {
 	/**
 	 * Get a single bucket by bucketId
 	 * 
-	 * @param id
-	 * @return
+	 * @param id Id of bucket
+	 * @return Bucket of given id
 	 */
 	@RequestMapping(value="/bucket/{id}", method=RequestMethod.GET)
-	public ResponseEntity<Void> getBucketByBucketId(@PathVariable int id){
+	public ResponseEntity<SimpleBucket> getBucketByBucketId(@PathVariable int id){
 		SimpleBucket bucket = bucketService.findBucketByBucketId(id);
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		return new ResponseEntity<>(bucket, HttpStatus.OK);
 	}
 	
 	/**
 	 * Update bucket table's category and description based on given bucketId
 	 * 
-	 * @param simpleBucket
-	 * @return
+	 * @param simpleBucket Updated info 
+	 * @return 
 	 */
-	@RequestMapping(value="/bucket/updateBucket", method = RequestMethod.GET)
+	@RequestMapping(value="/bucket/updateBucket", method = RequestMethod.POST)
 	public ResponseEntity<Void> updateBucket(@RequestBody SimpleBucket simpleBucket) {
 		bucketService.updateBucket(simpleBucket);
 		return new ResponseEntity<>(HttpStatus.OK);
