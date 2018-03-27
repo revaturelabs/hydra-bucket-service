@@ -54,6 +54,7 @@ public class BucketController {
 	@RequestMapping(value="/bucket/createBucket", method= RequestMethod.POST, consumes= MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<SimpleBucket> createNewBucket(@Valid @RequestBody SimpleBucket bucket){
 		log.info("Saving bucket:" + bucket);
+		bucket.setIsActive(true);
 		bucketService.save(bucket);
 		
 		return new ResponseEntity<>(bucket, HttpStatus.CREATED);
