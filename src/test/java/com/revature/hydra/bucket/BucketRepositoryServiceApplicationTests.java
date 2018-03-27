@@ -1,4 +1,5 @@
-package com.revature.caliber;
+package com.revature.hydra.bucket;
+
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class HydraBucketServiceMasterApplicationTests {
+public class BucketRepositoryServiceApplicationTests {
 
 	@Test
 	public void contextLoads() {

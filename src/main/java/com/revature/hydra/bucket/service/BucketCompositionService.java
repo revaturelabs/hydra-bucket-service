@@ -28,7 +28,7 @@ public class BucketCompositionService {
 	}
 	
 	public SimpleBucket findByBucketId(Integer bucketId) {
-		SimpleBucket bucket = bucketRepository.findByBucketId(bucketId);
+		SimpleBucket bucket = bucketRepository.findOne(bucketId);
 		return bucket;
 	}
 	

@@ -33,7 +33,7 @@ public class BucketReceiverProcessor {
 			List<Integer> bucketIds = (List<Integer>) gson.fromJson(request.get("bucketIds"), type);
 
 			for (Integer bucketId : bucketIds) {
-				simpleBucketList.add(bucketRepository.findByBucketId(bucketId));
+				simpleBucketList.add(bucketRepository.findOne(bucketId));
 			}
 		}
 
