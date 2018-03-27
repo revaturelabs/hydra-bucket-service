@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: hydra-bucket-service
+  cloud:
+    config:
+uri: ${CONFIG_SERVER_URL}
