@@ -22,7 +22,7 @@ import com.revature.beans.SimpleBucket;
 import com.revature.hydra.bucket.service.BucketService;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin
 @ComponentScan("com.revature.hydra.bucket.*")
 public class BucketController {
 
