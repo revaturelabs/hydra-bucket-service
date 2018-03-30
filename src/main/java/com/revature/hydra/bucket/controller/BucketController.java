@@ -79,8 +79,8 @@ public class BucketController {
 	 * @return 
 	 */
 	@RequestMapping(value="/bucket/updateBucket", method = RequestMethod.POST)
-	public ResponseEntity<Void> updateBucket(@RequestBody SimpleBucket simpleBucket) {
+	public ResponseEntity<SimpleBucket> updateBucket(@RequestBody SimpleBucket simpleBucket) {
 		bucketService.updateBucket(simpleBucket);
-		return new ResponseEntity<>(HttpStatus.OK);
+		return new ResponseEntity<>(simpleBucket, HttpStatus.OK);
 	}
 }
