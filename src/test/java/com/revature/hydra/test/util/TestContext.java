@@ -1,5 +1,7 @@
 package com.revature.hydra.test.util;
 
+import javax.servlet.ServletContext;
+
 import org.mockito.Mockito;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
@@ -7,9 +9,11 @@ import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFacto
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.RabbitListenerContainerFactory;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.eureka.CloudEurekaInstanceConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 import com.netflix.appinfo.ApplicationInfoManager;
 import com.netflix.discovery.EurekaClient;
@@ -61,5 +65,20 @@ public class TestContext {
 	    factory.setMessageConverter(messageConverter);
 	    return factory;
 	}
+	
+	@Autowired
+	ServletContext context;    
+	
+	@Bean
+	public ServletContext getServletContext() {
+	  return context;
+	}
+	
+	@Bean
+    public RequestMappingHandlerMapping requestMappingHandlerMapping() {
+       RequestMappingHandlerMapping mapping = new RequestMappingHandlerMapping();
+       // add properties here
+       return mapping;
+    }
     
 }
