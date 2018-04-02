@@ -37,7 +37,7 @@ public class BucketController {
 	/**
 	 * Get list of all the buckets
 	 * 
-	 * @return
+	 * @return list of all buckets
 	 */
 	@RequestMapping(value="/bucket/getBuckets", method=RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<SimpleBucket>> getAllBuckets(){
@@ -76,7 +76,7 @@ public class BucketController {
 	 * Update bucket table's category and description based on given bucketId
 	 * 
 	 * @param simpleBucket Updated info 
-	 * @return 
+	 * @return the given bucket with updated info
 	 */
 	@RequestMapping(value="/bucket/updateBucket", method = RequestMethod.POST)
 	public ResponseEntity<SimpleBucket> updateBucket(@RequestBody SimpleBucket simpleBucket) {

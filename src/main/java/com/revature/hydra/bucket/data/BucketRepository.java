@@ -11,6 +11,11 @@ import com.revature.beans.SimpleBucket;
 
 public interface  BucketRepository extends JpaRepository<SimpleBucket, Integer> {
 
+	/**
+	 * Update bucket table's category and description based on given bucketId
+	 * 
+	 * @param simpleBucket Updated info 
+	 */
 	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	@Modifying(clearAutomatically = true)
 	@Query("update SimpleBucket sb set bucketCategory = ?2, bucketDescription = ?3 where bucketId = ?1")
